@@ -1,9 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
 const metadata = {
@@ -15,43 +12,20 @@ const metadata = {
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
 
-  <Hero
-    image={{ 
-      src: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', 
-      alt: 'PC Studios Gaming Experience Coming Soon' 
-    }}
-  >
+  <Hero>
     <Fragment slot="title">
       PC Studios: <span class="text-accent dark:text-white">Próximamente</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Estamos trabajando en algo grande. La plataforma definitiva para gamers está en desarrollo. 
+      Estamos trabajando en algo grande. La plataforma definitiva para gamers está en desarrollo.
       <br class="hidden sm:inline" />
       <span class="font-semibold">Prepárate para la nueva era del gaming profesional.</span>
     </Fragment>
   </Hero>
 
-  <Note title="Estado del Proyecto:" description="Fase de desarrollo - Lanzamiento previsto para 2026" />
-
-  <Content
-    id="about"
-    isReversed
-    tagline="Nuestra Visión"
-    title="PC Studios: El futuro está en camino"
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Team working on gaming',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo experiencias únicas</h3>
-      Muy pronto podrás descubrir títulos exclusivos, soporte personalizado y una comunidad sin límites.
-    </Fragment>
-  </Content>
-
   <BlogLatestPosts
     title="Diario de Desarrollo"
-    information={`Sigue nuestros avances y entérate antes que nadie de la fecha oficial de lanzamiento.`}
+    information="Sigue nuestros avances y entérate antes que nadie de la fecha oficial de lanzamiento."
   />
 </Layout>
