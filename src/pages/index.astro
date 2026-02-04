@@ -5,10 +5,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'PC Studios Games — Tu tienda de videojuegos definitiva',
+  title: 'PC Studios Games — Próximamente',
   ignoreTitleTemplate: true,
 };
 ---
@@ -17,73 +16,42 @@ const metadata = {
   <Fragment slot="announcement"></Fragment>
 
   <Hero
-    actions={[
-      { 
-        variant: 'primary', 
-        text: 'Sobre nosotros', 
-        href: '#about',
-        icon: 'tabler:info-circle' 
-      },
-    ]}
     image={{ 
       src: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', 
-      alt: 'PC Studios Gaming Experience' 
+      alt: 'PC Studios Gaming Experience Coming Soon' 
     }}
   >
     <Fragment slot="title">
-      PC Studios: <span class="hidden xl:inline">Donde el Gaming</span>
-      <span class="text-accent dark:text-white"> cobra vida</span>
+      PC Studios: <span class="text-accent dark:text-white">Próximamente</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Bienvenido a la plataforma definitiva para gamers. En <span class="font-semibold">PC Studios</span> 
-        seleccionamos los mejores títulos para que tu única preocupación sea disfrutar.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">PC Studios: Play Professional.</span>
-      Descubre lanzamientos exclusivos, ofertas únicas y una comunidad apasionada por el desarrollo de videojuegos.
+      Estamos trabajando en algo grande. La plataforma definitiva para gamers está en desarrollo. 
+      <br class="hidden sm:inline" />
+      <span class="font-semibold">Prepárate para la nueva era del gaming profesional.</span>
     </Fragment>
   </Hero>
 
-  <Note title="Nuestra Meta:" description="Calidad, Rendimiento y Experiencias Inolvidables" />
+  <Note title="Estado del Proyecto:" description="Fase de desarrollo - Lanzamiento previsto para 2026" />
 
   <Content
     id="about"
     isReversed
     tagline="Nuestra Visión"
-    title="PC Studios: De jugadores para jugadores"
+    title="PC Studios: El futuro está en camino"
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       alt: 'Team working on gaming',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo el futuro del gaming</h3>
-      Obtén una ventaja competitiva con títulos exclusivos y soporte personalizado.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo experiencias únicas</h3>
+      Muy pronto podrás descubrir títulos exclusivos, soporte personalizado y una comunidad sin límites.
     </Fragment>
   </Content>
 
   <BlogLatestPosts
-    title="Últimas noticias de nuestro Blog"
-    information={`Mantente al día con los parches, nuevos lanzamientos y tutoriales de PC Studios.`}
+    title="Diario de Desarrollo"
+    information={`Sigue nuestros avances y entérate antes que nadie de la fecha oficial de lanzamiento.`}
   />
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Unirse ahora',
-        href: '/',
-        icon: 'tabler:user-plus',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      ¿Listo para jugar?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Únete a PC Studios</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      No pierdas más tiempo. Empieza tu aventura hoy mismo con nosotros.
-    </Fragment>
-  </CallToAction>
 </Layout>
