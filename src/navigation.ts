@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Soporte',
-      href: '#',
+      href: getPermalink('/contact'),
     },
     {
       text: 'Blog',
