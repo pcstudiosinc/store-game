@@ -2,8 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'PC Studios Games — Próximamente',
@@ -14,52 +13,41 @@ const metadata = {
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
 
-  <Hero
-    actions={[
-      { variant: 'primary', text: 'Ir al Blog', href: '#blog' },
-      { text: 'Soporte', href: '/contact' },
-    ]}
-  >
+  <Hero>
     <Fragment slot="title">
       PC Studios: <span class="text-accent dark:text-white">Próximamente</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Estamos construyendo la plataforma definitiva para el gaming profesional.
+      Estamos trabajando en algo grande. La plataforma definitiva para gamers está en desarrollo.
       <br class="hidden sm:inline" />
-      <span class="font-semibold italic text-primary">Prepárate para el siguiente nivel.</span>
+      <span class="font-semibold">Prepárate para la nueva era del gaming profesional.</span>
     </Fragment>
   </Hero>
 
-  <div id="blog">
-    <BlogLatestPosts
-      title="Diario de Desarrollo"
-      information="Sigue nuestros avances y entérate antes que nadie de la fecha oficial de lanzamiento."
-      linkText="Ver todas las noticias"
-    />
-  </div>
-
-  <Features2
-    title="Síguenos en nuestras redes"
-    subtitle="Únete a la comunidad de PC Studios y sé el primero en conocer las novedades."
-    items={[
-      { title: 'YouTube', icon: 'tabler:brand-youtube', href: '#' },
-      { title: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-      { title: 'Discord', icon: 'tabler:brand-discord', href: '#' },
-      { title: 'TikTok', icon: 'tabler:brand-tiktok', href: '#' },
-    ]}
+  <BlogLatestPosts
+    title="Diario de Desarrollo"
+    information="Sigue nuestros avances y entérate antes que nadie de la fecha oficial de lanzamiento."
+    linkText="Ver todas las noticias"
   />
 
-  <CallToAction
-    title="¿Tienes alguna duda?"
-    subtitle="Aunque estemos en desarrollo, nuestro equipo está disponible para ayudarte."
-    actions={[
-      {
-        variant: 'secondary',
-        text: 'Contactar Soporte',
-        href: '/contact',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+  <section class="flex flex-col items-center justify-center py-12 border-t border-b border-gray-800 bg-page">
+    <div class="flex items-center gap-6">
+      <span class="text-sm font-medium uppercase tracking-widest text-gray-400">Follow us</span>
+      <div class="flex gap-4">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="YouTube">
+          <Icon name="tabler:brand-youtube" class="w-6 h-6" />
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+          <Icon name="tabler:brand-instagram" class="w-6 h-6" />
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Discord">
+          <Icon name="tabler:brand-discord" class="w-6 h-6" />
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+          <Icon name="tabler:brand-tiktok" class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
