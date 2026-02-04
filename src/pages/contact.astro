@@ -5,73 +5,66 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contacto — PC Studios',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Soporte" title="¡Conectemos!" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Déjanos un mensaje"
+    subtitle="Si tienes dudas sobre un juego o tu cuenta, nuestro equipo de soporte está listo para ayudarte."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Nombre',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Correo electrónico',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Mensaje',
     }}
     disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      label: 'Al enviar este formulario, aceptas la recopilación de tus datos personales para fines de soporte.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Nuestro equipo suele responder en menos de 24 horas hábiles."
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="¡Estamos aquí para ayudarte!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Soporte General',
+        description: 'Consultas sobre gestión de cuentas, navegación o problemas con la web.',
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: 'Ventas y Licencias',
+        description: 'Preguntas sobre compras de juegos, reembolsos o ediciones especiales.',
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'Soporte Técnico',
+        description: 'Problemas con instalaciones, errores de descarga o compatibilidad.',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'soporte@pcstudiosgames.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Comunidad',
+        description: 'Únete a nuestro Discord oficial para ayuda en tiempo real.',
+        icon: 'tabler:brand-discord',
+      },
+      {
+        title: 'Ubicación',
+        description: 'PC Studios Inc. — Chile',
         icon: 'tabler:map-pin',
       },
     ]}
