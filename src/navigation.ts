@@ -1,10 +1,23 @@
-import { getPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    { text: 'Inicio', href: getPermalink('/') },
-    { text: 'Juegos', href: getPermalink('/category/juegos') },
-    { text: 'Soporte', href: getPermalink('/contact') },
+    {
+      text: 'Inicio',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'Juegos',
+      href: '#',
+    },
+    {
+      text: 'Soporte',
+      href: '#',
+    },
+    {
+      text: 'Blog',
+      href: getBlogPermalink(),
+    },
   ],
   actions: [{ text: 'Tienda', href: 'https://pcstudiosgames.com', target: '_self' }],
 };
