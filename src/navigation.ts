@@ -37,10 +37,8 @@ export const footerData = {
     { text: 'Términos', href: getPermalink('/terms') },
     { text: 'Privacidad', href: getPermalink('/privacy') },
   ],
-  socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/pcstudiosinc/store-game' },
-  ],
+  // Dejamos socialLinks vacío para eliminar los iconos de Instagram y GitHub
+  socialLinks: [], 
   footNote: `
     © 2026 PC Studios Games · Todos los derechos reservados.
   `,
