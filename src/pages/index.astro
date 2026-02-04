@@ -3,10 +3,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -20,13 +18,12 @@ const metadata = {
 
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Explorar Catálogo',
-        href: '#features',
-        icon: 'tabler:device-gamepad',
+      { 
+        variant: 'primary', 
+        text: 'Sobre nosotros', 
+        href: '#about',
+        icon: 'tabler:info-circle' 
       },
-      { text: 'Sobre nosotros', href: '#about' },
     ]}
     image={{ 
       src: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', 
@@ -50,45 +47,6 @@ const metadata = {
 
   <Note title="Nuestra Meta:" description="Calidad, Rendimiento y Experiencias Inolvidables" />
 
-  <Features
-    id="features"
-    tagline="Lo que ofrecemos"
-    title="¿Por qué elegir PC Studios?"
-    subtitle="Nos esforzamos por ofrecer una experiencia de usuario fluida y una selección de juegos de alto nivel."
-    items={[
-      {
-        title: 'Integración Perfecta',
-        description: 'Plataforma optimizada para una navegación rápida y descargas seguras.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Componentes Modernos',
-        description: 'Interfaz diseñada pensando en la facilidad de uso para el jugador.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Seguridad Garantizada',
-        description: 'Tus datos y compras están protegidos con los más altos estándares.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Velocidad de Carga',
-        description: 'No pierdas tiempo esperando. Nuestra web vuela para que tú juegues más.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Optimización SEO',
-        description: 'Hacemos que nuestros juegos y contenidos lleguen a todo el mundo.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Comunidad Abierta',
-        description: 'Escuchamos tus ideas para mejorar nuestra tienda día tras día.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
   <Content
     id="about"
     isReversed
@@ -108,15 +66,6 @@ const metadata = {
   <BlogLatestPosts
     title="Últimas noticias de nuestro Blog"
     information={`Mantente al día con los parches, nuevos lanzamientos y tutoriales de PC Studios.`}
-  />
-
-  <Stats
-    stats={[
-      { title: 'Descargas', amount: '132K' },
-      { title: 'Usuarios', amount: '48.4K' },
-      { title: 'Juegos', amount: '250+' },
-      { title: 'Países', amount: '15' },
-    ]}
   />
 
   <CallToAction
