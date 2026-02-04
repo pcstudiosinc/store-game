@@ -1,71 +1,46 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
-import Header from '~/components/widgets/Header.astro';
-
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-
 import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 
 const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/arthelokyo/astrowind';
-
+const appStoreDownloadLink = '#';
 const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/arthelokyo/astrowind';
+const googlePlayDownloadLink = '#';
 
 const metadata = {
-  title: 'PC Studios Mobile',
+  title: 'PC Studios Mobile - Próximamente',
 };
 ---
 
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
-      position="left"
-      links={[
-        { text: 'Servicios', href: '#' },
-        { text: 'Características', href: '#' },
-        { text: 'Sobre nosotros', href: '#' },
-      ]}
-      actions={[
-        {
-          text: 'Entrar',
-          href: '#',
-        },
-      ]}
-      isSticky
-    />
-  </Fragment>
 
   <Hero2
     tagline="PC Studios Mobile"
     image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?auto=format&fit=crop&w=987&q=80',
       alt: 'PC Studios Hero Image',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white">PC Studios App</span>: <br /> gaming profesional <span
-        class="hidden xl:inline">en tus manos</span
-      >
+      <span class="text-accent dark:text-white">PC Studios App</span>: <br /> gaming profesional <span class="hidden xl:inline">en tus manos</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Explora nuestra tienda de juegos desde tu dispositivo móvil.
+      Explora nuestra tienda de juegos desde tu dispositivo móvil. Muy pronto disponible.
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
         <Image src={appStoreImg} alt="App Store Image" width={200} />
       </Button>
-
       <Button variant="link" href={googlePlayDownloadLink}>
         <Image src={googlePlayImg} alt="Google Play Image" width={200} />
       </Button>
@@ -79,52 +54,12 @@ const metadata = {
     tagline="Guía rápida"
     columns={2}
     items={[
-      {
-        title: 'Crea tu cuenta',
-        description: `Regístrate para acceder a ofertas exclusivas.`,
-        icon: 'tabler:square-number-1',
-      },
-      {
-        title: 'Explora el catálogo',
-        description:
-          'Cientos de títulos de PC Studios y desarrolladores independientes.',
-        icon: 'tabler:square-number-2',
-      },
-      {
-        title: 'Compra segura',
-        description: 'Múltiples métodos de pago para tu comodidad.',
-        icon: 'tabler:square-number-3',
-      },
-      {
-        title: '¡A jugar!',
-        description: `Descarga y disfruta de tus juegos al instante.`,
-        icon: 'tabler:square-number-4',
-      },
+      { title: 'Crea tu cuenta', description: 'Regístrate para acceder a ofertas exclusivas.', icon: 'tabler:square-number-1' },
+      { title: 'Explora el catálogo', description: 'Cientos de títulos de PC Studios.', icon: 'tabler:square-number-2' },
+      { title: 'Compra segura', description: 'Múltiples métodos de pago.', icon: 'tabler:square-number-3' },
+      { title: '¡A jugar!', description: 'Descarga y disfruta al instante.', icon: 'tabler:square-number-4' },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
-    }}
   />
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Interfaz amigable',
-        description: 'Navega fácilmente por todas las categorías.',
-        icon: 'tabler:wand',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Características</h3>
-    </Fragment>
-  </Content>
 
   <Stats
     title="Nuestra comunidad"
@@ -138,23 +73,15 @@ const metadata = {
   <FAQs
     title="Preguntas frecuentes"
     items={[
-      {
-        title: '¿Qué es PC Studios Games?',
-        description: 'Es tu nueva plataforma favorita para descubrir y comprar videojuegos de PC.',
-      },
+      { title: '¿Qué es PC Studios Games?', description: 'Tu nueva plataforma para descubrir videojuegos.' },
     ]}
   />
 
-  <CallToAction
-    id="download"
-    title="¡Descarga nuestra app ahora!"
-    subtitle="Simplifica tu proceso de compra y eleva tu experiencia de juego."
-  >
+  <CallToAction id="download" title="¡Descarga nuestra app próximamente!" subtitle="Eleva tu experiencia de juego.">
     <div slot="actions" class="flex max-w-sm gap-4">
       <Button variant="link" href={appStoreDownloadLink}>
         <Image src={appStoreImg} alt="App Store Image" width={200} />
       </Button>
-
       <Button variant="link" href={googlePlayDownloadLink}>
         <Image src={googlePlayImg} alt="Google Play Image" width={200} />
       </Button>
