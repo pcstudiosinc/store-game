@@ -10,13 +10,13 @@ site:
 metadata:
   title:
     default: PC Studios Games
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    template: '%s — PC Studios'
+  description: "Estudio independiente de desarrollo de videojuegos. Explora nuestros proyectos, noticias y diarios de desarrollo oficiales."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: PC Studios Games
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -38,25 +38,25 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/blog/%slug%' # Cambiado para que el click funcione correctamente
       robots:
         index: true
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'blog'
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'category'
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'tag'
       robots:
         index: false
 
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: null # o "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'dark' # Te lo he puesto en "dark" por defecto, que queda mejor para juegos
